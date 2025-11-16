@@ -132,13 +132,13 @@ for l=0:L
       v_c_ijk = zeros(N,M0* M^(l-1)+1);
       v_c_ijk(:,1)=v0;
       S_coarse_r = zeros(N,M0* M^(l-1)+1);
- S_coarse_r(:,1)=S0;
- v_coarse_r = zeros(N,M0* M^(l-1)+1);
- v_coarse_r(:,1)=v0;
-  S_c_m_r = zeros(N,M0* M^(l-1)+1);
- S_c_m_r(:,1)=S0;
- v_c_m_r = zeros(N,M0* M^(l-1)+1);
- v_c_m_r(:,1)=v0;
+      S_coarse_r(:,1)=S0;
+      v_coarse_r = zeros(N,M0* M^(l-1)+1);
+      v_coarse_r(:,1)=v0;
+      S_c_m_r = zeros(N,M0* M^(l-1)+1);
+      S_c_m_r(:,1)=S0;
+      v_c_m_r = zeros(N,M0* M^(l-1)+1);
+      v_c_m_r(:,1)=v0;
       dW_fine_reshaped = reshape(dW1', M, M0*M^(l-1), N);
       dW1_coarse = squeeze(sum(dW_fine_reshaped, 1))' ;
       dW_fine_reshaped = reshape(dW2', M, M0*M^(l-1), N);
@@ -278,3 +278,4 @@ legend( 'P_l-P_{l-1}(Euler)', 'P_l-P_{l-1}(Milstein)', 'P_l-P_{l-1}(IJK)','P_l-P
 title('Levelweise Varianzabschätzung (Bestimmung von β)');
 
 end
+
